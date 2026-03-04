@@ -1,0 +1,8 @@
+name: pc-assignment
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - -e git+https://github.com/milmillin/symexp.git@main#egg=symexp

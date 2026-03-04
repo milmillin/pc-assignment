@@ -1,0 +1,8 @@
+.vscode
+src
+output
+__pycache__
+paper_assignment.csv
+paper_rooms.csv
+people_assignment.csv
+people_rooms.csv
