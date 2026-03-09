@@ -14,6 +14,7 @@ Given a set of paper assignments (each paper has two reviewers), assign people t
 A two-round approach is used:
 1. **Round 1**: Assign people to 4 groups (rooms A–D), maximizing co-located papers.
 2. **Round 2**: For remaining papers (reviewers in different rooms in round 1), assign people to 2 groups (rooms E–F).
+3. Remaining papers are assigned group G.
 
 ## Input
 
@@ -21,7 +22,7 @@ A two-round approach is used:
 
 ## Output
 
-- `paper_rooms.csv` — maps each paper to a room (A–F).
+- `paper_rooms.csv` — maps each paper to a room (A–G).
 - `people_rooms.csv` — maps each person to their room in each round (`room1`: A–D, `room2`: E–F).
 
 ## Dependencies
