@@ -12,18 +12,20 @@ Given a set of paper assignments (each paper has two reviewers), assign people t
 - Paper counts per room are balanced (configurable max difference).
 
 A two-round approach is used:
-1. **Round 1**: Assign people to 4 groups (rooms A–D), maximizing co-located papers.
-2. **Round 2**: For remaining papers (reviewers in different rooms in round 1), assign people to 2 groups (rooms E–F).
-3. Remaining papers are assigned group G.
+1. **Round 1**: Assign people to 4 groups (Room_A–Room_D), maximizing co-located papers.
+2. **Round 2**: For remaining papers (reviewers in different rooms in round 1), assign people to 2 groups (Room_X–Room_Y).
+3. Papers where both reviewers are virtual are assigned to **Orphans**.
+4. Remaining papers are assigned to **Plenary**.
 
 ## Input
 
 - `assignments.csv` — columns: `Obfuscated ID`, `Primary Email`, `Secondary Email`. Each row is a paper with two reviewer emails.
+- `virtuals.csv` — columns: `Email Link`. Each row is a virtual reviewer. Papers where both reviewers are virtual are assigned to Orphans.
 
 ## Output
 
-- `paper_rooms.csv` — maps each paper to a room (A–G).
-- `people_rooms.csv` — maps each person to their room in each round (`room1`: A–D, `room2`: E–F).
+- `paper_rooms.csv` — maps each paper to a room (Room_A–Room_D, Room_X–Room_Y, Plenary, or Orphans).
+- `people_rooms.csv` — maps each person to their room in each round (`room1`: Room_A–Room_D, `room2`: Room_X–Room_Y).
 
 ## Dependencies
 
